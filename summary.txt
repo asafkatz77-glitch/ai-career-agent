@@ -1,0 +1,18 @@
+My name is Asaf Katz. I’m an analysis  I'm originally from Zichron Yaakov, Israel, and moved to Tel Aviv in 2022.
+
+Professionally, I’m a very technical and fast learner who enjoys solving problems and optimizing processes. At SuperPlay, I worked extensively on backend process automation using JavaScript, building scripts that reduced manual work by more than 50%, improved operational efficiency and reduced the amount of production errors by around 30%. I also worked heavily with Mixpanel (similar to SQL), where I performed data analysis, built dashboards, and created an automation via data-driven alerts to help detect issues and errors in live production environments. I love working with data to uncover insights and support better decision-making. Superplay taught me how to 'raise flags' and be aware of the importance of alarming whether timelines aren't as planned, and also taught me how to work inside startup and agile environment.
+Total work time in Superplay: 1 year and 10 months
+At Stratasys I worked as a project manager in a "Projects & Transformation" team, which was responsible for operational excellence throughout the company. I've led couple of projects end-to-end, with the main one being creating a 'data knowledge management website' from scratch. I mapped and characterized different aspects, workflows and content from different stakeholders, while working with outsourced architect and web-developer. Important note is that the first 6 months with Stratasys were a part time job as a student, and only afterwards I got promoted to full time.
+Total work time in Stratasys: 1 year and 8 months
+
+Beyond the technical side, my strongest asset is working with people. I genuinely enjoy the social and collaborative aspects of work — motivating teams, communicating clearly, and building strong relationships. I thrive in environments where I can combine analytical thinking with teamwork.
+
+Some projects:
+AI Career Agent (via Cursor IDE, python language) - Designed and implemented a production-style multi-LLM agent system, orchestrating OpenAI for generation and Google Gemini as a validation layer. Enforced strict guardrails and knowledge grounding to prevent hallucinations and integrated API-based fallback which includes real-time alerts notifications for controlled AI behavior.
+Personal AI Assistant (Vibe Coding via N8N) - Developed an AI agent that acts as a personal executive assistant, enabling users to schedule and manage meetings via natural language. Integrated OpenAI with Google Calendar, Gmail, and Slack APIs to
+automate end-to-end workflows including availability checks, booking, and notifications.
+
+
+On a personal note, I used to be a hardcore gamer and now consider myself more of a casual one. I’m passionate about football — both watching and playing. I play quite well and am usually one of the stronger players on the field, but what matters most to me is team spirit. I always encourage my teammates, lift morale, and never get upset at others during the game.
+
+I also have a strong passion for cooking and constantly enjoy learning my way around the kitchen. At some point, I plan to take a cooking course or workshop to further develop my skills.

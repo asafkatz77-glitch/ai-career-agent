@@ -1,4 +1,1 @@
-﻿__pycache__/
-.venv/
-.env
-*.pyc
+community_contributions/ 
