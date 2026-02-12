@@ -5,7 +5,10 @@ import os
 import requests
 from pypdf import PdfReader
 import gradio as gr
+<<<<<<< HEAD
 from pydantic import BaseModel
+=======
+>>>>>>> def1ccc (Initial commit - AI career agent)
 
 
 load_dotenv(override=True)
@@ -74,15 +77,19 @@ tools = [{"type": "function", "function": record_user_details_json},
         {"type": "function", "function": record_unknown_question_json}]
 
 
+<<<<<<< HEAD
 class Evaluation(BaseModel):
     is_acceptable: bool
     feedback: str
 
 
+=======
+>>>>>>> def1ccc (Initial commit - AI career agent)
 class Me:
 
     def __init__(self):
         self.openai = OpenAI()
+<<<<<<< HEAD
         self.gemini = OpenAI(
             api_key=os.getenv("GOOGLE_API_KEY"),
             base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -96,15 +103,34 @@ class Me:
         base_dir = os.path.dirname(os.path.abspath(__file__))
         linkedin_path = os.path.join(base_dir, "linkedin.pdf")
         summary_path = os.path.join(base_dir, "summary.txt")
+=======
+        self.name = "Asaf Katz"
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        linkedin_path = os.path.join(BASE_DIR, "me", "linkedin.pdf")
+>>>>>>> def1ccc (Initial commit - AI career agent)
         reader = PdfReader(linkedin_path)
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
+<<<<<<< HEAD
         with open(summary_path, "r", encoding="utf-8") as f:
             self.summary = f.read()
 
+=======
+        self.summary_path = os.path.join(BASE_DIR, "me", "summary.txt")
+        self.summary_mtime = 0
+        self.summary = ""
+        self._refresh_summary()
+
+    def _refresh_summary(self):
+        mtime = os.path.getmtime(self.summary_path)
+        if mtime != self.summary_mtime:
+            with open(self.summary_path, "r", encoding="utf-8") as f:
+                self.summary = f.read()
+            self.summary_mtime = mtime
+>>>>>>> def1ccc (Initial commit - AI career agent)
 
     def handle_tool_call(self, tool_calls):
         results = []
@@ -118,6 +144,7 @@ class Me:
         return results
     
     def system_prompt(self):
+<<<<<<< HEAD
         system_prompt = f"""
 You are acting as {self.name} on his personal website.
 
@@ -184,10 +211,36 @@ Do not allow invented details. Treat implicit self-referential prompts like 'tel
                 tool_calls = assistant_message.tool_calls
                 results = self.handle_tool_call(tool_calls)
                 messages.append(assistant_message)
+=======
+        system_prompt = f"You are acting as {self.name}. You are answering questions on {self.name}'s website, \
+particularly questions related to {self.name}'s career, background, skills and experience. \
+Your responsibility is to represent {self.name} for interactions on the website as faithfully as possible. \
+You are given a summary of {self.name}'s background and LinkedIn profile which you can use to answer questions. \
+Be professional and engaging, as if talking to a potential client or future employer who came across the website. \
+If you don't know the answer to any question, use your record_unknown_question tool to record the question that you couldn't answer, even if it's about something trivial or unrelated to career. \
+If the user is engaging in discussion, try to steer them towards getting in touch via email; ask for their email and record it using your record_user_details tool. "
+
+        system_prompt += f"\n\n## Summary:\n{self.summary}\n\n## LinkedIn Profile:\n{self.linkedin}\n\n"
+        system_prompt += f"With this context, please chat with the user, always staying in character as {self.name}."
+        return system_prompt
+    
+    def chat(self, message, history):
+        self._refresh_summary()
+        messages = [{"role": "system", "content": self.system_prompt()}] + history + [{"role": "user", "content": message}]
+        done = False
+        while not done:
+            response = self.openai.chat.completions.create(model="gpt-4o-mini", messages=messages, tools=tools)
+            if response.choices[0].finish_reason=="tool_calls":
+                message = response.choices[0].message
+                tool_calls = message.tool_calls
+                results = self.handle_tool_call(tool_calls)
+                messages.append(message)
+>>>>>>> def1ccc (Initial commit - AI career agent)
                 messages.extend(results)
             else:
                 done = True
         return response.choices[0].message.content
+<<<<<<< HEAD
 
     def rerun(self, reply, message, history, feedback):
         updated_system_prompt = self.system_prompt() + "\n\n## Previous answer rejected\nYou just tried to reply, but the quality control rejected your reply.\n"
@@ -214,6 +267,8 @@ Do not allow invented details. Treat implicit self-referential prompts like 'tel
         except Exception as e:
             print(f"Gemini evaluation unavailable, returning primary reply: {e}", flush=True)
             return self.finalize_reply(reply, message)
+=======
+>>>>>>> def1ccc (Initial commit - AI career agent)
     
 
 if __name__ == "__main__":
