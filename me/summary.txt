@@ -1,0 +1,9 @@
+My name is Asaf Katz. I’m an analysis  I'm originally from Zichron Yaakov, Israel, and moved to Tel Aviv in 2022.
+
+Professionally, I’m a very technical and fast learner who enjoys solving problems and optimizing processes. At SuperPlay, I worked extensively on backend process automation using JavaScript, building scripts that reduced manual work and improved operational efficiency. I also worked heavily with Mixpanel (similar to SQL), where I performed data analysis, built dashboards, and created data-driven alerts to help detect issues and errors in live production environments. I love working with data to uncover insights and support better decision-making.
+
+Beyond the technical side, my strongest asset is working with people. I genuinely enjoy the social and collaborative aspects of work — motivating teams, communicating clearly, and building strong relationships. I thrive in environments where I can combine analytical thinking with teamwork.
+
+On a personal note, I used to be a hardcore gamer and now consider myself more of a casual one. I’m passionate about football — both watching and playing. I play quite well and am usually one of the stronger players on the field, but what matters most to me is team spirit. I always encourage my teammates, lift morale, and never get upset at others during the game.
+
+I also have a strong passion for cooking and constantly enjoy learning my way around the kitchen. At some point, I plan to take a cooking course or workshop to further develop my skills.
