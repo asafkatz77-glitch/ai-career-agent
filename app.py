@@ -221,4 +221,4 @@ Do not allow invented details. Treat implicit self-referential prompts like 'tel
 
 if __name__ == "__main__":
     me = Me()
-    gr.ChatInterface(me.chat, type="messages").launch()
+    gr.ChatInterface(me.chat).launch()
