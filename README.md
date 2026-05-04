@@ -1,1 +1,10 @@
-"# Career Conversation" 
+---
+title: Career Conversation
+emoji: 🤖
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+# Career Conversation
